@@ -6,7 +6,9 @@ namespace GitExercise
     {
         public static void Main()
         {
-            Console.WriteLine("Console Calculator App");
+            while (true)
+            {
+                Console.WriteLine("Console Calculator App");
             Console.WriteLine(new string('-', 15));
 
             Console.Write("a = ");
@@ -24,20 +26,33 @@ namespace GitExercise
             Console.Write("Option: ");
             string choice = Console.ReadLine();
 
-            switch (choice)
-            {
-                case "a":
-                    OptionsManager.Add(a, b);
-                    break;
-                case "s":
-                    OptionsManager.Subtract(a, b);
-                    break;
-                case "m":
-                    OptionsManager.Multiply(a, b);
-                    break;
+                switch (choice)
+                {
+                    case "a":
+                        OptionsManager.Add(a, b);
+                        break;
+                    case "s":
+                        OptionsManager.Subtract(a, b);
+                        break;
+                    case "m":
+                        OptionsManager.Multiply(a, b);
+                        break;
+                    case "dr":
+                        OptionsManager.DivideRemainder(a, b);
+                        break;
+                    case "ex":
+                        Console.Clear();
+                        Console.WriteLine("Goodbye");
+                        Console.ReadKey(true);
+                        return;
+                            
+
+                }      
+                        
+                    
             }
 
-            Console.WriteLine("Pres any key to close the app...");
+            Console.WriteLine("Pres any key to continue...");
             Console.ReadKey(true);
         }
     }
