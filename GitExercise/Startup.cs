@@ -7,6 +7,7 @@ namespace GitExercise
     {
         public static void Main()
         {
+<<<<<<< HEAD
             bool isAuthorized = CheckCreditentials();
             if (!isAuthorized)
             {
@@ -16,6 +17,11 @@ namespace GitExercise
             }
             
             Console.WriteLine("Console Calculator App");
+=======
+            while (true)
+            {
+                Console.WriteLine("Console Calculator App");
+>>>>>>> Dev-B
             Console.WriteLine(new string('-', 15));
 
             Console.Write("a = ");
@@ -33,6 +39,7 @@ namespace GitExercise
             Console.Write("Option: ");
             string choice = Console.ReadLine();
 
+<<<<<<< HEAD
             switch (choice)
             {
                 case "a":
@@ -50,9 +57,35 @@ namespace GitExercise
                 case "sabs":
                     OptionsManager.SubtractAbs(a, b);
                     break;
+=======
+                switch (choice)
+                {
+                    case "a":
+                        OptionsManager.Add(a, b);
+                        break;
+                    case "s":
+                        OptionsManager.Subtract(a, b);
+                        break;
+                    case "m":
+                        OptionsManager.Multiply(a, b);
+                        break;
+                    case "dr":
+                        OptionsManager.DivideRemainder(a, b);
+                        break;
+                    case "ex":
+                        Console.Clear();
+                        Console.WriteLine("Goodbye");
+                        Console.ReadKey(true);
+                        return;
+                            
+
+                }      
+                        
+                    
+>>>>>>> Dev-B
             }
 
-            Console.WriteLine("Pres any key to close the app...");
+            Console.WriteLine("Pres any key to continue...");
             Console.ReadKey(true);
             
         }
